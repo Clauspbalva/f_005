@@ -83,12 +83,13 @@ def convert_temperature(t_i, s_i, s_o):
 test_config = {
     'function': convert_temperature,
     'input_names': ['t_i', 's_i', 's_o'],
+    'num_precision': [0.5],
     'tests': [
-        {'id': 1, 'input_values': [None, None, None], 'output_expected': None, 'num_precision': 0.05},
-        {'id': 2, 'input_values': [25, 'CELSIUS', 'FAHRENHEIT'], 'output_expected': 77.0, 'num_precision': 0.05},
-        {'id': 3, 'input_values': [25, 'CELSIUS', 'FAHRENHEITT'], 'output_expected': None, 'num_precision': 0.05},
-        {'id': 4, 'input_values': [25, 'CELSIUS', None], 'output_expected': None, 'num_precision': 0.05},
-        {'id': 5, 'input_values': [-273, 'CELSIUS', 'KELVIN'], 'output_expected': 0.15, 'num_precision': 0.05}
+        {'id': 1, 'input_values': [None, None, None], 'output_expected': None},
+        {'id': 2, 'input_values': [25, 'CELSIUS', 'FAHRENHEIT'], 'output_expected': 77.0},
+        {'id': 3, 'input_values': [25, 'CELSIUS', 'FAHRENHEITT'], 'output_expected': None},
+        {'id': 4, 'input_values': [25, 'CELSIUS', None], 'output_expected': None},
+        {'id': 5, 'input_values': [-273, 'CELSIUS', 'KELVIN'], 'output_expected': 0.15}
     ],
     'print_details': True  
 }

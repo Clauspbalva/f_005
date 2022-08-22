@@ -25,7 +25,7 @@ def function_test(test_config):
         if test['output_expected'] != int and test['output_expected'] != float: #Preguntar si no es un numero
             test_result = 'Passed' if test['output_expected'] == output_calculated else 'Failed'
         else:
-            test_result = 'Passed' if abs(test['output_expected'] - output_calculated) < test['num_precision'] else 'Failed'
+            test_result = 'Passed' if abs(test['output_expected'] - output_calculated) <= test['num_precision'] else 'Failed'
         tests.append(test)
         tests[-1]['output_calculated'] = output_calculated
         tests[-1]['result'] = test_result
