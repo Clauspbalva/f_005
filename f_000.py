@@ -23,7 +23,7 @@ def function_test(test_config):
     for test in test_config['tests']:
         output_calculated = test_config['function'](*test['input_values'])
         if test['output_expected'] != int and test['output_expected'] != float: #Preguntar si no es un numero
-            test_result = 'Failed'
+            test_result = 'Passed' if test['output_expected'] == output_calculated else 'Failed'
         else:
             test_result = 'Passed' if abs(test['output_expected'] - output_calculated) < test['num_precision'] else 'Failed'
         tests.append(test)
