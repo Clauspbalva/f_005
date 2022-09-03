@@ -10,7 +10,7 @@ Algorithms and Data Structures practice with Python
 # Imports
 # --------------------------------------------------------------------------------------------------
 
-from f_000 import function_test
+from f_000.f_000 import function_test
 
 # --------------------------------------------------------------------------------------------------
 # VARIABLE DECLARATION
