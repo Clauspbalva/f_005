@@ -50,6 +50,19 @@ Specification file for `convert_temperature` function.
 
 <br>
 
+## 1. Test cases
+---
+
+| Id | `t_i` | `s_i` | `s_o` | Output expected |
+|---|---|---|---|---|
+| 1 | `None` | `None` | `None` | None |
+| 2 | `25` | `CELSIUS` | `FAHRENHEIT` | 77.0 |
+| 3 | `25` | `CELSIUS` | `FAHRENHEITT` | None |
+| 4 | `25` | `CELSIUS` | `None` | None |
+| 5 | `-273` | `CELSIUS` | `KELVIN` | 0.15 |
+
+<br>
+
 ## 2. Algorithm
 ---
  ![Algorithm](f_005_algorithm.drawio.png)
